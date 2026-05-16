@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi2fesc3drp3s"]
+
+[ext_resource type="Script" uid="uid://d2rknklu5i6g" path="res://inventory/world/sword_pickup.gd" id="1_yk2id"]
+[ext_resource type="Resource" uid="uid://gb3qthf5otsv" path="res://inventory/items/keysilver.tres" id="2_yk2id"]
+[ext_resource type="Texture2D" uid="uid://ba7rf7aeq7acd" path="res://Art/keysilver.png" id="3_vrt75"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl5sy"]
+size = Vector2(20, 25.5)
+
+[node name="SwordPickup" type="Area2D"]
+position = Vector2(80, 104)
+script = ExtResource("1_yk2id")
+item = ExtResource("2_yk2id")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-0.99999994, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("3_vrt75")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 6.25)
+shape = SubResource("RectangleShape2D_pl5sy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

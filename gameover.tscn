@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://dr6y5yia7k14s"]
+
+[ext_resource type="Script" path="res://gameover.gd" id="1_2nw6q"]
+[ext_resource type="FontFile" uid="uid://dsuaxfuqkqna3" path="res://PeaberryBase.ttf" id="1_kctv7"]
+[ext_resource type="AudioStream" uid="uid://d0ocacxmb37wh" path="res://Myuu - Angst.mp3" id="2_2nw6q"]
+[ext_resource type="Script" uid="uid://ck801xknllqaa" path="res://labelscriptforgameover.gd" id="3_af4fq"]
+[ext_resource type="Texture2D" uid="uid://boxp7f562fqbj" path="res://Levels/Bat_Sprite_Sheet.png" id="3_w3x71"]
+[ext_resource type="Script" uid="uid://xouonnfxw47g" path="res://animated_sprite_2d.gd" id="4_af4fq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1o2j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at6rn"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dihg0"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqglp"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y70q"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrn07"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pn7gr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at6rn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dihg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqglp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0y70q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrn07")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control" unique_id=105457087]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2nw6q")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=630533303]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(0.021865658, 9.364439e-06, 0.13489416, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1788844303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g1o2j")
+
+[node name="Label" type="Label" parent="." unique_id=702570979]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1155.0
+offset_bottom = 652.0
+theme_override_fonts/font = ExtResource("1_kctv7")
+theme_override_font_sizes/font_size = 28
+text = "You Died!!
+oops"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_af4fq")
+
+[node name="Button" type="Button" parent="." unique_id=419945891]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.042000003
+offset_left = 552.0
+offset_top = 383.0
+offset_right = 675.61597
+offset_bottom = 435.0
+theme_override_fonts/font = ExtResource("1_kctv7")
+theme_override_font_sizes/font_size = 22
+text = "Restart"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=940923230]
+position = Vector2(552, 383)
+stream = ExtResource("2_2nw6q")
+autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=269710559]
+position = Vector2(47.5, 77)
+scale = Vector2(5.0625, 3.5)
+sprite_frames = SubResource("SpriteFrames_pn7gr")
+animation = &"move"
+script = ExtResource("4_af4fq")
+
+[connection signal="pressed" from="Button" to="." method="_on_retry_pressed"]

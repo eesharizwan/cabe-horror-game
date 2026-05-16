@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://ba6215mpquvha"]
+
+[ext_resource type="Texture2D" uid="uid://bci30dpgu1xt3" path="res://Art/keyruby.png" id="1_3laeq"]
+[ext_resource type="Script" uid="uid://cttl5xg52bcck" path="res://inventory/inventory_item.gd" id="2_n34wb"]
+
+[resource]
+script = ExtResource("2_n34wb")
+item_name = "keyruby"
+icon = ExtResource("1_3laeq")
+metadata/_custom_type_script = "uid://cttl5xg52bcck"

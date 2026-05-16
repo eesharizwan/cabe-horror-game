@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://lsaqnrns4cw7"]
+
+[ext_resource type="Texture2D" uid="uid://dn87tkvv18gnw" path="res://Art/sword.png" id="1_48ydw"]
+[ext_resource type="Script" uid="uid://d2rknklu5i6g" path="res://inventory/world/sword_pickup.gd" id="1_pl5sy"]
+[ext_resource type="Resource" uid="uid://dnq7l1iqr3va1" path="res://inventory/items/sword_item.tres" id="2_731cw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl5sy"]
+size = Vector2(27, 27)
+
+[node name="SwordPickup" type="Area2D"]
+position = Vector2(80, 104)
+script = ExtResource("1_pl5sy")
+item = ExtResource("2_731cw")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_48ydw")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_pl5sy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

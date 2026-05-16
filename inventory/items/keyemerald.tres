@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://drrcmnnarsala"]
+
+[ext_resource type="Texture2D" uid="uid://bbap70g8qmtn4" path="res://Art/keyemerald.png" id="1_cfo6y"]
+[ext_resource type="Script" uid="uid://cttl5xg52bcck" path="res://inventory/inventory_item.gd" id="2_oj36q"]
+
+[resource]
+script = ExtResource("2_oj36q")
+item_name = "keyemerald"
+icon = ExtResource("1_cfo6y")
+metadata/_custom_type_script = "uid://cttl5xg52bcck"

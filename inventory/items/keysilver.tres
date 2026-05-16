@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://gb3qthf5otsv"]
+
+[ext_resource type="Texture2D" uid="uid://ba7rf7aeq7acd" path="res://Art/keysilver.png" id="1_dayai"]
+[ext_resource type="Script" uid="uid://cttl5xg52bcck" path="res://inventory/inventory_item.gd" id="2_jtcv4"]
+
+[resource]
+script = ExtResource("2_jtcv4")
+item_name = "keysilver"
+icon = ExtResource("1_dayai")
+metadata/_custom_type_script = "uid://cttl5xg52bcck"

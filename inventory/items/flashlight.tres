@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cni0w3c3qdrf8"]
+
+[ext_resource type="Texture2D" uid="uid://dchn3iei2efyl" path="res://Art/FINAL_flashlight_icon.png" id="1_6lu1v"]
+[ext_resource type="Script" uid="uid://cttl5xg52bcck" path="res://inventory/inventory_item.gd" id="1_s7wkp"]
+
+[resource]
+script = ExtResource("1_s7wkp")
+item_name = "Flashlight"
+icon = ExtResource("1_6lu1v")
+metadata/_custom_type_script = "uid://cttl5xg52bcck"

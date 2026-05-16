@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bdo0lhiuj8c20"]
+
+[ext_resource type="Texture2D" uid="uid://mrjci7utwo50" path="res://Art/FINAL_good_pills_icon.png" id="1_5453y"]
+[ext_resource type="Script" uid="uid://cttl5xg52bcck" path="res://inventory/inventory_item.gd" id="1_lruma"]
+
+[resource]
+script = ExtResource("1_lruma")
+item_name = "good pills"
+icon = ExtResource("1_5453y")
+is_consumable = true
+metadata/_custom_type_script = "uid://cttl5xg52bcck"

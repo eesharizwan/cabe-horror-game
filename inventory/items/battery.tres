@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://damuluf68ysdh"]
+
+[ext_resource type="Texture2D" uid="uid://bkib1u2k854r3" path="res://Art/FINAL_batteries_icon.png" id="1_ri2f7"]
+[ext_resource type="Script" uid="uid://cttl5xg52bcck" path="res://inventory/inventory_item.gd" id="1_xivsy"]
+
+[resource]
+script = ExtResource("1_xivsy")
+item_name = "Battery"
+icon = ExtResource("1_ri2f7")
+is_consumable = true
+metadata/_custom_type_script = "uid://cttl5xg52bcck"
