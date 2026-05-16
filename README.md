@@ -12,11 +12,6 @@ Built using the Godot game engine and GDScript, the project focuses on gameplay 
 
 This project was developed collaboratively as part of CS 292.
 
-Contributors:
-- TreeMann24
-- Contributor 2
-- Contributor 3
-- Eesha Rizwan
 
 My contributions included:
 - gameplay system implementation
